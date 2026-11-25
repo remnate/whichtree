@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "runId": "a8c6e093-6b2d-48fc-9384-b2e5d24d1073",
+  "recordedAt": "2026-11-25T12:43:18.025Z",
+  "driver": "host-rpc",
+  "scenario": "sequence",
+  "runtime": {
+    "whichtree": "0.1.0",
+    "node": "24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "filesystem": "2.4.0",
+    "sdk": "1.32.2",
+    "git": "2.56.1",
+    "codex": "0.171.0"
+  },
+  "tool": "read_text_file",
+  "arguments": {
+    "path": "src/probe.ts"
+  },
+  "appServerClientCapabilities": {
+    "experimentalApi": true
+  },
+  "mcp": {
+    "clientCapabilities": "unknown",
+    "negotiated": "unknown",
+    "rootsExchange": "unknown",
+    "serverCapabilities": [
+      "tools",
+      "resources"
+    ]
+  },
+  "events": [
+    {
+      "session": "retained",
+      "event": "initialize",
+      "rpcId": 1
+    },
+    {
+      "session": "retained",
+      "event": "thread/start",
+      "rpcId": 2,
+      "cwd": "A"
+    },
+    {
+      "session": "retained",
+      "event": "probe/starting"
+    },
+    {
+      "session": "retained",
+      "event": "probe/ready"
+    },
+    {
+      "session": "retained",
+      "event": "mcpServerStatus/list",
+      "rpcId": 3
+    },
+    {
+      "session": "retained",
+      "event": "thread/settings/update",
+      "rpcId": 5
+    },
+    {
+      "session": "retained",
+      "event": "probe/ready"
+    },
+    {
+      "session": "retained",
+      "event": "thread/read",
+      "rpcId": 6,
+      "cwd": "B"
+    },
+    {
+      "session": "retained",
+      "event": "mcpServerStatus/list",
+      "rpcId": 7
+    },
+    {
+      "session": "retained",
+      "event": "config/mcpServer/reload",
+      "rpcId": 9
+    },
+    {
+      "session": "retained",
+      "event": "probe/starting"
+    },
+    {
+      "session": "retained",
+      "event": "thread/read",
+      "rpcId": 10,
+      "cwd": "B"
+    },
+    {
+      "session": "retained",
+      "event": "probe/ready"
+    },
+    {
+      "session": "retained",
+      "event": "mcpServerStatus/list",
+      "rpcId": 11
+    },
+    {
+      "session": "cold",
+      "event": "initialize",
+      "rpcId": 1
+    },
+    {
+      "session": "cold",
+      "event": "thread/start",
+      "rpcId": 2,
+      "cwd": "B"
+    },
+    {
+      "session": "cold",
+      "event": "probe/starting"
+    },
+    {
+      "session": "cold",
+      "event": "probe/ready"
+    },
+    {
+      "session": "cold",
+      "event": "mcpServerStatus/list",
+      "rpcId": 3
+    }
+  ],
+  "observations": [
+    {
+      "scenario": "baseline",
+      "session": "retained",
+      "configured": "A",
+      "expected": "A",
+      "observed": "A",
+      "callId": 4,
+      "verdict": "match"
+    },
+    {
+      "scenario": "stale-after-switch",
+      "session": "retained",
+      "configured": "A",
+      "expected": "B",
+      "observed": "A",
+      "callId": 8,
+      "verdict": "mismatch"
+    },
+    {
+      "scenario": "after-repair",
+      "session": "retained",
+      "configured": "B",
+      "expected": "B",
+      "observed": "B",
+      "callId": 12,
+      "verdict": "match"
+    },
+    {
+      "scenario": "cold",
+      "session": "cold",
+      "configured": "B",
+      "expected": "B",
+      "observed": "B",
+      "callId": 4,
+      "verdict": "match"
+    }
+  ],
+  "status": "mismatch",
+  "cleaned": true
+}

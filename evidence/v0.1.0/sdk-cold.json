@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "runId": "1801c70b-2090-4943-a69d-6323c83d3a53",
+  "recordedAt": "2026-11-25T12:43:16.002Z",
+  "driver": "sdk-real-server",
+  "scenario": "cold",
+  "runtime": {
+    "whichtree": "0.1.0",
+    "node": "24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "filesystem": "2.4.0",
+    "sdk": "1.32.2",
+    "git": "2.56.1"
+  },
+  "tool": "read_text_file",
+  "arguments": {
+    "path": "src/probe.ts"
+  },
+  "mcp": {
+    "clientCapabilities": {},
+    "negotiated": "2025-11-25",
+    "rootsExchange": "none observed",
+    "serverCapabilities": [
+      "resources",
+      "tools"
+    ]
+  },
+  "events": [],
+  "observations": [
+    {
+      "scenario": "cold",
+      "session": "sdk",
+      "configured": "B",
+      "expected": "B",
+      "observed": "B",
+      "callId": 2,
+      "verdict": "match"
+    }
+  ],
+  "status": "match",
+  "cleaned": true
+}

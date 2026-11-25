@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "runId": "facf040d-a80e-4cb5-8815-a4377999460b",
+  "recordedAt": "2026-11-25T12:43:15.817Z",
+  "driver": "fixture",
+  "scenario": "demo",
+  "runtime": {
+    "whichtree": "0.1.0",
+    "node": "24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "filesystem": "2.4.0",
+    "sdk": "1.32.2",
+    "git": "2.56.1"
+  },
+  "tool": "read_text_file",
+  "arguments": {
+    "path": "src/probe.ts"
+  },
+  "mcp": {
+    "clientCapabilities": "unknown",
+    "negotiated": "unknown",
+    "rootsExchange": "unknown"
+  },
+  "events": [],
+  "observations": [
+    {
+      "scenario": "cold",
+      "session": "fixture-B",
+      "configured": "B",
+      "expected": "B",
+      "observed": "B",
+      "callId": 1,
+      "verdict": "match"
+    },
+    {
+      "scenario": "cold-stale",
+      "session": "fixture-A",
+      "configured": "A",
+      "expected": "B",
+      "observed": "A",
+      "callId": 1,
+      "verdict": "mismatch"
+    }
+  ],
+  "status": "passed",
+  "cleaned": true
+}

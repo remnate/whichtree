@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "runId": "937a067a-d51a-4602-8e8e-05b2f0a8da35",
+  "recordedAt": "2026-11-25T12:43:16.900Z",
+  "driver": "host-rpc",
+  "scenario": "cold-stale",
+  "runtime": {
+    "whichtree": "0.1.0",
+    "node": "24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "filesystem": "2.4.0",
+    "sdk": "1.32.2",
+    "git": "2.56.1",
+    "codex": "0.171.0"
+  },
+  "tool": "read_text_file",
+  "arguments": {
+    "path": "src/probe.ts"
+  },
+  "appServerClientCapabilities": {
+    "experimentalApi": true
+  },
+  "mcp": {
+    "clientCapabilities": "unknown",
+    "negotiated": "unknown",
+    "rootsExchange": "unknown",
+    "serverCapabilities": [
+      "tools",
+      "resources"
+    ]
+  },
+  "events": [
+    {
+      "session": "cold",
+      "event": "initialize",
+      "rpcId": 1
+    },
+    {
+      "session": "cold",
+      "event": "thread/start",
+      "rpcId": 2,
+      "cwd": "B"
+    },
+    {
+      "session": "cold",
+      "event": "probe/ready"
+    },
+    {
+      "session": "cold",
+      "event": "mcpServerStatus/list",
+      "rpcId": 3
+    }
+  ],
+  "observations": [
+    {
+      "scenario": "cold-stale",
+      "session": "cold",
+      "configured": "A",
+      "expected": "B",
+      "observed": "A",
+      "callId": 4,
+      "verdict": "mismatch"
+    }
+  ],
+  "status": "mismatch",
+  "cleaned": true
+}
