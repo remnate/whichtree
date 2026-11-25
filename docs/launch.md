@@ -2,7 +2,7 @@
 
 I switched a Codex thread from worktree A to B and asked its filesystem tool to read `src/probe.ts`. It returned A’s copy. I had deliberately left the server pointed at A. After I corrected its root and reloaded it, the same thread made the same call and got B’s copy.
 
-[Watch the 20-second demo](https://github.com/remnate/whichtree/blob/main/media/worktree-switch.gif) or [run it locally](https://github.com/remnate/whichtree#run-from-a-checkout). WhichTree creates two temporary worktrees and an isolated server registration. The demo runs on Linux with Codex CLI 0.171.0 and needs no API key.
+[Watch the 20-second animated replay](https://github.com/remnate/whichtree/raw/refs/heads/main/media/worktree-switch.mp4) or [run the experiment locally](https://github.com/remnate/whichtree#run-from-a-checkout). The animation follows three recorded tool calls in the same thread. WhichTree creates two temporary worktrees and an isolated server registration. The demo runs on Linux with Codex CLI 0.171.0 and needs no API key.
 
 If you use Git worktrees with MCP, try the demo on your machine. Which host and tool would you want to check in your own setup? [Share your setup on GitHub](https://github.com/remnate/whichtree/issues).
 
