@@ -2,6 +2,8 @@
 
 See which Git checkout Codex's filesystem tool actually reads after a worktree switch. WhichTree asks for `src/probe.ts` in one live Codex app-server thread. A and B contain the same `witness` export with different random values. Only the returned file content identifies the checkout.
 
+![20-second Codex demo. The thread switches to B, the deliberately stale reader returns A, and reloading the reader makes the same query return B.](media/worktree-switch.gif)
+
 | Codex host RPC, Linux | Confirmed thread cwd | Registered server root | Returned |
 |---|---|---|---|
 | Start a thread in A | A | A | A · match |

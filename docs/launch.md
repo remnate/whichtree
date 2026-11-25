@@ -1,6 +1,10 @@
-# Launch note
+# Which Git worktree did your MCP tool actually read?
 
-WhichTree v0.1 asks the same filesystem tool for the same relative path before and after a Git worktree switch. In our Linux run, Codex confirmed directory B while the reader returned the export from A. We had deliberately left A in the server arguments. Updating the registration and reloading it made the same Codex thread return B. Inspect the [recorded run](../evidence/v0.1.0/host-sequence.json) or run the [checkout commands](../README.md) with your installed Codex CLI.
+I switched a Codex thread from worktree A to B and asked its filesystem tool to read `src/probe.ts`. It returned A’s copy. I had deliberately left the server pointed at A. After I corrected its root and reloaded it, the same thread made the same call and got B’s copy.
+
+[Watch the 20-second demo](https://github.com/remnate/whichtree/blob/main/media/worktree-switch.gif) or [run it locally](https://github.com/remnate/whichtree#run-from-a-checkout). WhichTree creates two temporary worktrees and an isolated server registration. The demo runs on Linux with Codex CLI 0.171.0 and needs no API key.
+
+If you use Git worktrees with MCP, try the demo on your machine. Which host and tool would you want to check in your own setup? [Share your setup on GitHub](https://github.com/remnate/whichtree/issues).
 
 ## Pilot
 
